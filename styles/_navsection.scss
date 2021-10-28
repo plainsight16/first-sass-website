@@ -1,0 +1,64 @@
+%alignitems {
+  display: flex;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background-color: $light;
+  z-index: 10;
+  padding: 1rem 1rem;
+  height: 80px;
+  &_logo {
+    font-size: 2rem;
+    color: $dark;
+    cursor: pointer;
+    margin-left: 24px;
+    text-decoration: none;
+  }
+  &_bars {
+    opacity: 0;
+    @media screen and (max-width: 768px) {
+      opacity: 1;
+      color: $dark;
+      font-size: 2rem;
+    }
+  }
+  &_links {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &_links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: $dark;
+    transition: all 0.3s;
+    &:hover {
+      color: $lime;
+    }
+  }
+  &_button {
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: $lime;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    margin-left: 16px;
+    color: $light;
+    font-size: 1rem;
+    &:hover {
+      background-color: $orangered;
+    }
+  }
+}
